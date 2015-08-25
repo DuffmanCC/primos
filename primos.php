@@ -48,7 +48,7 @@ function obtenerDivisores($dividendo){
 		$resto = $dividendo % $divisor;
 
 		while ( $resto == 0 ){
-			printf("%s es divisible entre %s, por lo tanto no es un número primo.", $dividendo, $divisor);
+			printf("%s es divisible entre %s, por lo tanto no es un número primo.<br>", $dividendo, $divisor);
 			$resto++;
 		}
 
@@ -60,7 +60,7 @@ function obtenerDivisores($dividendo){
 
 
 if ( $dividendo % 2 == 0){
-	echo "Los número pares no pueden ser primos pues siempre serán divisibles entre 2.<br>";
+	echo "Los números pares no pueden ser primos pues siempre serán divisibles entre 2.<br>";
 } else {
 	obtenerDivisores($dividendo);
 }
