@@ -12,7 +12,7 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower" type="text/css"  />
     <!-- CSS propio -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) CDN -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -40,12 +40,16 @@
 
        	<div class="row">
 
+        <div class="col-xs-12">
+          <h1>Averigua si el número es primo</h1>
+        </div>
+
     		<div class="col-xs-12">
 
 		    	<form action="primos.php" method="POST" class="form-inline">
 		        	<input type="text" class="form-control" name="numero" placeholder="introduce un número">
 		        	<input type="submit" class="btn btn-default" value="comprobar">
-		        </form>	
+		      </form>	
 
     		</div><!-- .col -->
 

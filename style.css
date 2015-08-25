@@ -1,0 +1,15 @@
+body{
+	background-color: #475B62;
+	color: #fff;
+}
+.row{
+	background-color: #708284;
+	padding: 30px 50px 50px 50px;
+	border-radius: 20px;
+	margin-top: 100px;
+}
+
+h1{
+	color: #EAE3CB;
+	margin-bottom: 30px;
+}

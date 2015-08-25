@@ -12,7 +12,7 @@
     <!-- Google Fonts CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower" type="text/css"  />
     <!-- CSS propio -->
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) CDN -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -41,17 +41,21 @@
         <div class="row">
 
             <div class="col-xs-12">
+                <h1>Averigua si el número es primo</h1>
+            </div>
+
+            <div class="col-xs-12">
 <?php 
 
 $dividendo = $_POST["numero"];
 
 function obtenerDivisores($dividendo){
     for ($divisor = 3; $divisor < $dividendo ; $divisor = $divisor + 2 ) { 
-        $cociente = $dividendo / $divisor;
+
         $resto = $dividendo % $divisor;
 
         if ( $resto == 0 ){
-            printf("%s es divisible entre %s, por lo tanto no es un número primo.<br>", $dividendo, $divisor);
+            printf("<p>%s es divisible entre %s, por lo tanto no es un número primo.</p>", $dividendo, $divisor);
         }    
     }
 }
