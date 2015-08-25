@@ -39,6 +39,7 @@
     <div class="container">
 
         <div class="row">
+
             <div class="col-xs-12">
 <?php 
 
@@ -51,11 +52,7 @@ function obtenerDivisores($dividendo){
 
         if ( $resto == 0 ){
             printf("%s es divisible entre %s, por lo tanto no es un número primo.<br>", $dividendo, $divisor);
-        }
-
-        if ($dividendo == $divisor){
-            printf("%s es un número primo puesto que solo es divisible entre 1 y sí mismo.", $dividendo);
-        }
+        }    
     }
 }
 

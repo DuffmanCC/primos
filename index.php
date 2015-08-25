@@ -42,9 +42,9 @@
 
     		<div class="col-xs-12">
 
-		    	<form action="primos.php" method="POST">
-		        	<input type="text" name="numero" placeholder="introduce un número">
-		        	<input type="submit" value="comprobar">
+		    	<form action="primos.php" method="POST" class="form-inline">
+		        	<input type="text" class="form-control" name="numero" placeholder="introduce un número">
+		        	<input type="submit" class="btn btn-default" value="comprobar">
 		        </form>	
 
     		</div><!-- .col -->
