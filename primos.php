@@ -41,28 +41,29 @@
         <div class="row">
 
             <div class="col-xs-12">
-                <h1>Averigua si el número es primo</h1>
-            </div>
-
-            <div class="col-xs-12">
 <?php 
 
 $dividendo = $_POST["numero"];
 
 function obtenerDivisores($dividendo){
+    $conteo = 0;
     for ($divisor = 3; $divisor < $dividendo ; $divisor = $divisor + 2 ) { 
 
-        $resto = $dividendo % $divisor;
+        $resto = $dividendo % $divisor;     
 
         if ( $resto == 0 ){
             printf("<p>%s es divisible entre %s, por lo tanto no es un número primo.</p>", $dividendo, $divisor);
-        }    
+            $conteo++;
+        }  
+    }
+    if( $conteo < 1 ){
+        printf("<p>%s es un número primo.</p>", $dividendo);
     }
 }
 
 
 if ( $dividendo % 2 == 0){
-    echo "Los números pares no pueden ser primos pues siempre serán divisibles entre 2.<br>";
+    echo "<p>Los números pares no pueden ser primos pues siempre serán divisibles entre 2.</p>";
 } else {
     obtenerDivisores($dividendo);
 }

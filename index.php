@@ -48,7 +48,7 @@
 
 		    	<form action="primos.php" method="POST" class="form-inline">
 		        	<input type="text" class="form-control" name="numero" placeholder="introduce un número">
-		        	<input type="submit" class="btn btn-default" value="comprobar">
+		        	<input type="submit" class="btn btn-default" value="Comprobar">
 		      </form>	
 
     		</div><!-- .col -->
