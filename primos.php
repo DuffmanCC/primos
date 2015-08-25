@@ -36,40 +36,45 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+    <div class="container">
 
+        <div class="row">
+            <div class="col-xs-12">
 <?php 
 
 $dividendo = $_POST["numero"];
 
 function obtenerDivisores($dividendo){
-	for ($divisor = 3; $divisor < $dividendo ; $divisor = $divisor + 2 ) { 
-		$cociente = $dividendo / $divisor;
-		$resto = $dividendo % $divisor;
+    for ($divisor = 3; $divisor < $dividendo ; $divisor = $divisor + 2 ) { 
+        $cociente = $dividendo / $divisor;
+        $resto = $dividendo % $divisor;
 
-		while ( $resto == 0 ){
-			printf("%s es divisible entre %s, por lo tanto no es un número primo.<br>", $dividendo, $divisor);
-			$resto++;
-		}
+        if ( $resto == 0 ){
+            printf("%s es divisible entre %s, por lo tanto no es un número primo.<br>", $dividendo, $divisor);
+        }
 
-		if ($dividendo == $divisor){
-			printf("%s es un número primo puesto que solo es divisible entre 1 y sí mismo.", $dividendo);
-		}
-	}
+        if ($dividendo == $divisor){
+            printf("%s es un número primo puesto que solo es divisible entre 1 y sí mismo.", $dividendo);
+        }
+    }
 }
 
 
 if ( $dividendo % 2 == 0){
-	echo "Los números pares no pueden ser primos pues siempre serán divisibles entre 2.<br>";
+    echo "Los números pares no pueden ser primos pues siempre serán divisibles entre 2.<br>";
 } else {
-	obtenerDivisores($dividendo);
+    obtenerDivisores($dividendo);
 }
 
 ?>
 
-	<a href="index.php">Volver</a>
+                <a href="index.php" class="btn btn-default">Volver</a>
 
-    </div>	
+            </div><!-- .col -->
+
+        </div><!-- .row -->
+
+    </div><!-- .container -->	
     
   </body>
 </html>

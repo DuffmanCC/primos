@@ -36,14 +36,22 @@
   </head>
   <body>
 
-    <div class="container-fluid">
+    <div class="container">
 
-        <form action="primos.php" method="POST">
-        	<input type="text" name="numero" placeholder="introduce un número">
-        	<input type="submit" value="comprobar">
-        </form>
+       	<div class="row">
 
-    </div>	
+    		<div class="col-xs-12">
+
+		    	<form action="primos.php" method="POST">
+		        	<input type="text" name="numero" placeholder="introduce un número">
+		        	<input type="submit" value="comprobar">
+		        </form>	
+
+    		</div><!-- .col -->
+
+    	</div><!-- .row -->
+
+    </div><!-- .container -->
     
   </body>
 </html>
