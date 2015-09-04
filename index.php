@@ -46,7 +46,7 @@
 
     		<div class="col-xs-12">
 
-		    	<form action="primos.php" method="POST" class="form-inline">
+		    	<form action="index.php" method="POST" class="form-inline">
 		        	<input type="text" class="form-control" name="numero" placeholder="introduce un número">
 		        	<input type="submit" class="btn btn-default" value="Comprobar">
 		      </form>	
@@ -54,6 +54,50 @@
     		</div><!-- .col -->
 
     	</div><!-- .row -->
+
+      <div class="row">
+
+          <div class="col-xs-12">
+<?php 
+
+if(isset($_POST["numero"])){
+  $dividendo = $_POST["numero"];
+} else {
+  echo "aún no has introducido ningún número";
+}
+;
+
+function obtenerDivisores($dividendo){
+  $conteo = 0;
+  for ($divisor = 3; $divisor < $dividendo ; $divisor = $divisor + 2 ) { 
+
+      $resto = $dividendo % $divisor;     
+
+      if ( $resto == 0 ){
+          printf("<p>%s es divisible entre %s, por lo tanto no es un número primo.</p>", $dividendo, $divisor);
+          $conteo++;
+      }  
+  }
+  if( $conteo < 1 ){
+      printf("<p>%s es un número primo.</p>", $dividendo);
+  }
+}
+
+if(!isset($dividendo)){
+  return;
+} elseif(isset($dividendo) % 2 == 0){
+  echo "<p>Los números pares no pueden ser primos pues siempre serán divisibles entre 2.</p>";
+} else {
+  obtenerDivisores($dividendo);
+}
+
+?>
+
+          </div><!-- .col -->
+
+      </div><!-- .row -->      
+
+
 
     </div><!-- .container -->
     
